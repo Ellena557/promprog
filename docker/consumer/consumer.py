@@ -18,9 +18,9 @@ def do_receive():
     connection = pika.BlockingConnection(pika.ConnectionParameters(host="rabbitmq"))
     channel = connection.channel()
     channel.queue_declare(queue='random_rabbit')
-    channel.basic_consume(callback,
-                          queue='random_rabbit')   
+    channel.basic_consume(callback, queue='random_rabbit')   
     return connection, channel 
+
 
 def main():
     do_sleeping()
@@ -36,6 +36,7 @@ def main():
             mychannel.stop_consuming()
 
     connection.close()
+
 
 if __name__ == '__main__':
     main()
