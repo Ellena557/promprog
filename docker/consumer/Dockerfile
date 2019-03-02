@@ -3,7 +3,7 @@ WORKDIR /home/user/promprog/docker/consumer
 
 COPY requirements.txt /home/user/promprog/docker/consumer
 COPY . .
-RUN pip install --no-cache-dir -r /home/user/promprog/docker/consumer/requirements.txt
+RUN pip install -r /home/user/promprog/docker/consumer/requirements.txt
 
 CMD [ "python", "./consumer.py" ]
 
