@@ -1,0 +1,12 @@
+<html>
+<h4>Return to the main rage: </h4>
+<p><a href="/">Questions</a></p>
+
+{% block content %}
+    <h2>Ask a question</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Ask!</button>
+    </form>
+{% endblock %}
+</html>

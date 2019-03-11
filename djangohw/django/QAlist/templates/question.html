@@ -1,0 +1,15 @@
+<h4>Your question has been successfully posted! </h4>
+
+<h4>Return to the main page: </h4> 
+<p><a href="/">Questions</a></p>
+
+
+{% block qadetail %}
+    {% for post in posts %}
+        <div class="post">
+            <p><a href=" ">{{ post.title }}</a></p>
+            <p>{{ post.text}}</p>
+            <br>
+        </div>
+    {% endfor %}
+{% endblock %}

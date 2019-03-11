@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QA forum</title>
+    <meta charset="utf-8">
+    {% load static %}
+  </head>
+
+  <body>
+	 <h2>Welcome to this QA forum!</h2>
+	 <br>
+	 <br>
+	 <h3> Do you want to ask a new question? </h3>
+	 
+	 <a href="/new/">New question</a> 
+	 <br>
+	 <br>
+	 <h3> List of questions: </h3>
+	 <br>
+         <div class="content container">
+		<div class="row">
+			<div class="col">
+		         	{% block qadetail %}
+		                {% endblock %}
+		        </div>
+		</div>
+	 </div>
+  </body>
+</html>
